@@ -5,7 +5,7 @@ public class ExerciseOne {
         int increment = 100;
         int calories = 1700;
         
-        for(int d = 1; d < 8; d++){
+        for(int d = 1; d < 8; d=+1){
             switch(d){
                 case 1:
                     Day ="Monday";
@@ -30,7 +30,7 @@ public class ExerciseOne {
                     break;
             }
 
-            if (d >= 3) {
+            if (d >= 3){
                 calories += increment;
             }
 
