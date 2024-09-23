@@ -34,7 +34,7 @@ public class ExerciseTwo {
             {9, 8, 7},
         };
 
-        //looping for cars matriks
+        
         for(int i=0; i<cars.length; i++){
             for(int j=0; j<cars[i].length; j++){
                 x.setCar(cars[i][j]);

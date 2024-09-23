@@ -1,6 +1,6 @@
 public class TDArray {
      public static void main(String [] args){
-        int[][] matrix = new int[3][4];//3 rows 4 collumn
+        int[][] matrix = new int[4][4];//3 rows 4 collumn
 
         matrix[0][0]=1; matrix[0][1]=1; matrix[0][2]=1; matrix[0][3]=1;
         matrix[1][0]=2; matrix[1][1]=1; matrix[1][2]=1; matrix[1][3]=1;

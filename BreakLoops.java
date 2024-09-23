@@ -6,6 +6,7 @@ public class BreakLoops {
         for(int i=1; i<=5; i++){
             if(i==3)
                 break;
+                // most common use of break is in loading
             System.out.println(i);
         }
     }
