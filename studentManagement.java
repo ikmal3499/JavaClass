@@ -1,8 +1,7 @@
-
 public class studentManagement {
     public static void main(String[] args) {
 
-        Student student = new Student(null, null, 0);
+        Student student = new Student(null, null);
 
         int[][] scores= {
             {88, 77, 76},

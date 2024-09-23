@@ -4,10 +4,9 @@ public class Student {
     private int[] scores;
     private double avgScores = 0.0;
 
-    public Student(String name, int[] scores, double avgScores){
+    public Student(String name, int[] scores){
         this.name = name;
         this.scores = scores;
-        this.avgScores = avgScores;
     }
 
     public String getName(){
@@ -16,18 +15,12 @@ public class Student {
     public int[] getScores(){
         return scores;
     }
-    public double getAvgScores(){
-        return avgScores;
-    }
 
     public void setName(String name){
         this.name = name;
     }
     public void setScores(int[] scores){
         this.scores = scores;
-    }
-    public void setAvgScores(double avgScores){
-        this.avgScores = avgScores;
     }
 
     public void calculateAverage(){
