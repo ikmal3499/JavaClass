@@ -14,19 +14,16 @@ public class EmployeeSalary {
             
             System.out.print("Name : ");
             String name = scanner.next();
-            System.out.print("Base Salary : RM");
+            System.out.print("Base Salary : RM ");
             double base = scanner.nextDouble();
-            System.out.print("Health Allowance : RM");
-            double health = scanner.nextDouble();
-            System.out.print("Transport Allowance : RM");
-            double transport = scanner.nextDouble();
             System.out.println();
 
-            employee[i] = new Employee(name, base, health, transport);
+            employee[i] = new Employee(name, base);
         }
 
         System.out.println("-----------------------------------");
         System.out.println("--------------OUTPUT---------------");
+
         for(int j=0; j<employee.length; j++){
             employee[j].display();
         }
