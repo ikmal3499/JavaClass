@@ -1,43 +1,32 @@
+import java.util.Scanner;
+
 public class studentManagement {
     public static void main(String[] args) {
 
-        Student student = new Student(null, null);
+        Scanner scanner = new Scanner(System.in);
+        Student[] student = new Student[5];
+        
+        for(int i=0; i<2; i++){
 
-        int[][] scores= {
-            {88, 77, 76},
-            {55, 88, 67},
-            {25, 45, 62},
-            {96, 66, 70},
-            {89, 92, 97},
-        };
+            System.out.print("Name : ");
+            String setName = scanner.next();
+            System.out.print("Mathematic : ");
+            int setMath = scanner.nextInt();
+            System.out.print("Science : ");
+            int setScience = scanner.nextInt();
+            System.out.print("English : ");
+            int setEnglish = scanner.nextInt();
+            System.out.println("");
 
-        String[] studName = {"Anas", "Luqman", "Anep", "Didi", "Syera"};
-
-        for(int row=0; row<scores.length; row++){
-
-            String subject = " ";
-            student.setScores(scores[row]);
-            student.setName(studName[row]);
-
-            System.out.println("Name " + student.getName());
-
-            for(int col=0; col<scores[row].length; col++){
-                if(col == 0){
-                    subject = "Math: ";
-                }else if(col == 1){
-                    subject = "Science: ";
-                }
-                else if(col == 2){
-                    subject = "English: ";
-                }
-                System.out.println(subject + student.getScores()[col]);
-            }
-
-            System.out.print("Average Score: ");
-            student.calculateAverage();
-            System.out.print("Grade: ");
-            student.assignGrade();
-            System.out.println("----------------------------------------");
+            student[i] = new Student(setName, setMath, setScience, setEnglish);
         }
+
+        for(int j=0; j<2; j++){
+            student[j].display();
+            student[j].calculateAverage();
+            student[j].assignGrade();
+        }
+
+        scanner.close();
     }
 }

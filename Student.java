@@ -1,40 +1,40 @@
 public class Student {
 
     private String name;
-    private int[] scores;
+    private int[] scores = new int[3];
+    private int math;
+    private int science;
+    private int english;
     private double avgScores = 0.0;
+    private String grade = " ";
 
-    public Student(String name, int[] scores){
+    public Student(String name, int math, int science, int english){
         this.name = name;
-        this.scores = scores;
+        this.scores[0] = math;
+        this.scores[1] = science;
+        this.scores[2] = english;
     }
 
     public String getName(){
         return name;
     }
-    public int[] getScores(){
-        return scores;
-    }
 
     public void setName(String name){
         this.name = name;
     }
-    public void setScores(int[] scores){
-        this.scores = scores;
-    }
 
     public void calculateAverage(){
-        double Scores = 0;
+
+        int s=0;
         for(int i=0; i<scores.length; i++){
-            Scores = Scores + scores[i];
+            s = s + scores[i];
         }
-        avgScores = Scores / 3;
+        avgScores = s / 3;
         
-        System.out.println(avgScores);
+        System.out.println("Average: " + avgScores);
     }
 
     public void assignGrade(){
-        String grade = " ";
 
         if(avgScores>89){
             grade = "A";
@@ -47,6 +47,16 @@ public class Student {
         }else if(avgScores<61){
             grade = "F";
         }
-        System.out.println(grade);
+        System.out.println("Grade: " + grade);
+        System.out.println(" ");
+    }
+
+    public void display(){
+        
+        System.out.println("Name: " + name);
+        System.out.println("Mathematic scores: " + scores[0]);
+        System.out.println("Science scores: " + scores[1]);
+        System.out.println("English scores: " + scores[2]);
+        
     }
 }
