@@ -10,7 +10,6 @@ public class EmployeeSalary {
         System.out.println("Employee Salary Management System");
         System.out.println("-----------------------------------------------------");
         
-        
         for(int i=0; i<employee.length; i++){
             
             System.out.print("Name : ");
