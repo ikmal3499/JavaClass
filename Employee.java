@@ -20,9 +20,9 @@ public class Employee {
 
     public double bonus(){
 
-        if(baseSalary>50000){
+        if(baseSalary>10000){
             bonus = 0.1 * baseSalary;
-        }else if(baseSalary>= 30000 && baseSalary<=50000){
+        }else if(baseSalary>= 5000 && baseSalary<=10000){
             bonus = 0.05 * baseSalary;
         }else{
             bonus = 0;
