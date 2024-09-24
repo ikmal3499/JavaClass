@@ -11,7 +11,14 @@ public class Employee {
     }
 
     public double calculateTotalSalary(){
+
         double total = 0;
+
+        total = baseSalary + healthAllowance + transportAllowance + bonus;
+        return total;
+    }
+
+    public double bonus(){
 
         if(baseSalary>50000){
             bonus = 0.1 * baseSalary;
@@ -21,9 +28,7 @@ public class Employee {
             bonus = 0;
         }
 
-        total = baseSalary + healthAllowance + transportAllowance + bonus;
-
-        return total;
+        return bonus;
     }
 
     public void display(){
@@ -32,6 +37,7 @@ public class Employee {
         System.out.println("Base Salary: RM " + baseSalary);
         System.out.println("Health Allowance: RM " + healthAllowance);
         System.out.println("Transport Allowance: RM " + transportAllowance);
+        System.out.println("Bonus: RM" + bonus());
         System.out.println("Total Salary: RM" + calculateTotalSalary());
         System.out.println();
     }

@@ -6,9 +6,10 @@ public class EmployeeSalary {
         Employee[] employee = new Employee[5];
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println();
         System.out.println("Employee Salary Management System");
         System.out.println("-----------------------------------------------------");
-        System.out.println();
+        
         
         for(int i=0; i<employee.length; i++){
             
