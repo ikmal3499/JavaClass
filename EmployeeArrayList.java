@@ -35,13 +35,14 @@ public class EmployeeArrayList {
 
         System.out.println("-----------------------------------");
         System.out.println("--------------OUTPUT---------------");
-        System.out.println("LIST OF PAYSLIP GENERATED");
-        System.out.println(startDate + " until " + endDate);
-        System.out.println("Total date " + Tdate);
+        System.out.println("-----LIST OF PAYSLIP GENERATED-----");
+        System.out.println("----" + startDate + " until " + endDate + "----");
+        System.out.println("----------Total date " + Tdate + "----------");
         System.out.println();
 
         try{
             for(int j=0; j<employee.length; j++){
+
                 employee[j].display();
             }
         }catch(ArrayIndexOutOfBoundsException e){
