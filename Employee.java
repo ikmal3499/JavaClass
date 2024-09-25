@@ -1,3 +1,5 @@
+import java.util.function.Predicate;
+
 public class Employee {
     private String name;
     private double baseSalary;
@@ -27,7 +29,6 @@ public class Employee {
         }else{
             bonus = 0;
         }
-
         return bonus;
     }
 
@@ -39,7 +40,14 @@ public class Employee {
         System.out.println("Transport Allowance: RM " + transportAllowance);
         System.out.println("Bonus: RM" + bonus());
         System.out.println("Total Salary: RM" + calculateTotalSalary());
+
+        Predicate<Double>isGreaterThanThen =  (Salary) -> Salary > 10000;//arrow tuu indicate this number is gonna be this number
+        
+        if(isGreaterThanThen.test(baseSalary)){
+            System.out.println("Congrats :)");
+        }else{
+            System.out.println("Your salary is less than 10000");
+        }
         System.out.println();
     }
-
 }
