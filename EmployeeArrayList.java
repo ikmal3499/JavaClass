@@ -10,6 +10,7 @@ public class EmployeeArrayList {
         Period Tdate = Period.between(startDate, endDate);
 
         Employee[] employee = new Employee[5];
+        ArrayList<Employee> empl = new ArrayList<>();
 
         ArrayList<String> emp = new ArrayList<>();
 
@@ -37,11 +38,11 @@ public class EmployeeArrayList {
         System.out.println("--------------OUTPUT---------------");
         System.out.println("-----LIST OF PAYSLIP GENERATED-----");
         System.out.println("----" + startDate + " until " + endDate + "----");
-        System.out.println("----------Total date " + Tdate + "----------");
+        System.out.println("----------Total days " + Tdate + "----------");
         System.out.println();
 
         try{
-            for(int j=0; j<employee.length; j++){
+            for(int j=0; j<employee.length+1; j++){
 
                 employee[j].display();
             }
